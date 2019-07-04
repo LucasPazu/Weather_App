@@ -1,0 +1,124 @@
+// Variables
+$primaryTextColor: rgb(225, 229, 230);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    color: inherit;
+    font-family: inherit;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(77, 147, 201), rgb(12, 93, 241));
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
+    padding: 3rem;
+
+    color: $primaryTextColor;
+}
+
+.search__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70rem;
+    height: 3rem;
+    margin-bottom: 8rem;
+    .search {
+        width: 60rem;
+        line-height: 1.5;
+
+        border: none;
+        background: none;
+        outline: none;
+        border-bottom: 2px solid white;
+
+        font-size: 3rem;
+        text-align: center;
+    }
+    .search::placeholder {
+        color: $primaryTextColor;
+        opacity: 0.5;
+    }
+
+    .btn {
+        width: 9rem;
+        height: 3.5rem;
+        margin-left: 3rem;
+        padding: 0.5rem 1rem;
+
+        outline: none;
+        border: none;
+        border-radius: 1rem;
+        border: 2px solid transparent;
+        background-color: rgb(32, 98, 160);
+        font-size: 1.6rem;
+    }
+
+    .btn:hover{
+        cursor: pointer;
+        border: 2px solid rgb(253, 250, 39);
+    }
+}
+
+.location {
+    width: 70rem;
+    height: 6rem;
+    margin-bottom: 5rem;
+
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.weather__basic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 70rem;
+    height: 15rem;
+
+    font-size: 4rem;
+
+    .temperature__section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .temperature {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 15rem;
+
+            &__degree {
+                cursor: pointer;
+            }
+
+            span {
+                margin-left: 1rem;
+                font-size: 5rem;
+            }
+            &__description {
+                margin-top: 1rem;
+                font-size: 2rem;
+                font-style: italic;
+            }
+        }
+    }
+}
